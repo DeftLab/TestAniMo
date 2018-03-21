@@ -28,7 +28,9 @@ public class SortingCroisement {
 				}			
 				sortedTreeMap.put(key, cageList.get(i));
 			}
+			
 
+			
 			ArrayList<CageCroisement> sortedCage = new ArrayList <CageCroisement>();
 			CageCroisement cage ;
 			for (Entry <String, CageCroisement> entry : sortedTreeMap.entrySet()){

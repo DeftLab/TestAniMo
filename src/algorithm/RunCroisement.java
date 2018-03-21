@@ -1,8 +1,10 @@
 package algorithm;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.swing.JOptionPane;
 
@@ -61,6 +63,15 @@ public class RunCroisement extends Run{
 					//crate a map with processName for key and CageList for value
 					
 					mapProcess = SortingCroisement.sortProcess(source.getCageList());
+					
+
+					Set cles = mapProcess.keySet();
+					Iterator it = cles.iterator();
+					while (it.hasNext()){
+					   Object cle = it.next(); // tu peux typer plus finement ici
+					   Object valeur = mapProcess.get(cle); // tu peux typer plus finement ici
+					   System.out.println("process = " + cle);
+					}
 					
 					//WRITE
 					//Create an excel file for each Process

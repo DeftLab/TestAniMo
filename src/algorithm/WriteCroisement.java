@@ -132,12 +132,12 @@ public class WriteCroisement {
 				adress = path.getNacBreedingFolder();
 			}else if (Run.animalFacility == AnimalFacility.a105) {
 				adress = path.getA105BreedingFolder();
-				System.out.println("ici " + adress);
 			}
 			
 			
 			//save
 			try {
+				System.out.println("processName = " + processName);
 				ExcelTools.saveWorkbook(wb, adress, processName);
 			} catch (IOException e){
 				JOptionPane .showMessageDialog(null, e.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
